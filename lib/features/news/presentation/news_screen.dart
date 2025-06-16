@@ -24,7 +24,7 @@ String _searchQuery = '';
 
 class _NewsScreenState extends State<NewsScreen> {
   late Future<List<NewsArticle>> _newsFuture;
-  String selectedCategory = 'all'; // tracks which category is selected
+  String selectedCategory = 'all'; 
   final categories = ['all', 'business', 'sports', 'technology', 'weather'];
 
   @override
@@ -36,7 +36,7 @@ class _NewsScreenState extends State<NewsScreen> {
   Future<void> _refreshNews() async {
     setState(() {
       _newsFuture = NewsService()
-          .fetchTopHeadlines(); // Or whatever your function is called
+          .fetchTopHeadlines(); 
     });
   }
 
@@ -80,8 +80,7 @@ class _NewsScreenState extends State<NewsScreen> {
               },
             ),
           ),
-
-          // CATEGORY BUTTONS
+          
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -106,7 +105,6 @@ class _NewsScreenState extends State<NewsScreen> {
             ),
           ),
 
-          // FILTERED NEWS LIST
           Expanded(
             child: FutureBuilder<List<NewsArticle>>(
               future: _newsFuture,
