@@ -16,7 +16,7 @@ class NewsArticleHiveModel extends HiveObject {
   @HiveField(3)
   String category;
 
-  @HiveField(4) // ✅ New field
+  @HiveField(4) 
   String url;
 
   NewsArticleHiveModel({
@@ -33,7 +33,6 @@ class NewsArticleHiveModel extends HiveObject {
       description: json['description'] ?? '',
       urlToImage: json['urlToImage'],
       url: json['url'] ?? '',
-      // ✅ Map from JSON
       category: category,
     );
   }
