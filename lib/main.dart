@@ -14,7 +14,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
 
-  Hive.registerAdapter(NewsArticleHiveModelAdapter()); // ✅ Correct
+  Hive.registerAdapter(NewsArticleHiveModelAdapter()); 
   await Hive.openBox<NewsArticleHiveModel>('bookmarks');
 
   runApp(
@@ -36,7 +36,7 @@ class WeatherNewsApp extends StatelessWidget {
       title: 'Weather & News Dashboard',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: themeNotifier.currentTheme, // ✅ use the current theme mode
+      themeMode: themeNotifier.currentTheme, 
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
