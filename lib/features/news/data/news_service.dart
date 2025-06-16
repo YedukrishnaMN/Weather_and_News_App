@@ -3,8 +3,8 @@ import 'package:http/http.dart' as http;
 import 'news_model.dart';
 
 class NewsService {
-  final String apiKey = 'c4aa1515472a49aaa481746ec6a83613'; // Replace this with your real API key
-  final String country = 'us'; // Change to 'us', 'gb', etc. if needed
+  final String apiKey = 'c4aa1515472a49aaa481746ec6a83613'; 
+  final String country = 'us'; 
 
   Future<List<NewsArticle>> fetchTopHeadlines() async {
     final url = Uri.parse(
@@ -28,7 +28,7 @@ class NewsService {
                 urlToImage: article['urlToImage'] ??
                     'https://via.placeholder.com/150/000000/FFFFFF/?text=No+Image',
                 category: 'general',
-                url: 'general'// You can enhance this later
+                url: 'general'
               ))
           .toList();
     } else {
