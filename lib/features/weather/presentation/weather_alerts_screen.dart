@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_news_dashboard/features/weather/data/weather_service.dart';
 import 'package:weather_news_dashboard/features/weather/data/weather/weather_alert.dart';
-import 'package:weather_news_dashboard/core/location/location_service.dart'; // Assuming you already have this
+import 'package:weather_news_dashboard/core/location/location_service.dart'; 
 
 class WeatherAlertsScreen extends StatefulWidget {
   const WeatherAlertsScreen({super.key});
